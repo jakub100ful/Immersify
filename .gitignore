@@ -125,4 +125,4 @@ dmypy.json
 .pyre/
 
 # Video resources
-/app/video/
+/app/videos/*
