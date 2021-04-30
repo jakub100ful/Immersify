@@ -2,7 +2,7 @@ import os
 import json
 
 
-def fetch_video_metadata():
+def fetch_metadata_list():
     """Crawls the videos folder and returns a list of metadata."""
 
     list_of_videos = []
