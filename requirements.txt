@@ -1,6 +1,17 @@
+autopep8==1.5.6
 click==7.1.2
+docopt==0.6.2
+emoji==1.2.0
 Flask==1.1.2
 itsdangerous==1.1.0
 Jinja2==2.11.3
+joblib==1.0.1
 MarkupSafe==1.1.1
+nltk==3.6.2
+pycodestyle==2.7.0
+regex==2021.4.4
+text2emotion==0.0.5
+toml==0.10.2
+tqdm==4.60.0
+webvtt-py==0.4.6
 Werkzeug==1.0.1

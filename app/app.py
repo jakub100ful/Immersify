@@ -2,6 +2,8 @@ from flask import Flask
 from flask import render_template
 from flask import request
 from fetch_videos import fetch_metadata_list
+from classify import classifySubtitle
+
 app = Flask(__name__)
 
 
@@ -14,4 +16,7 @@ def index():
 @app.route('/play')
 def play():
     video_id = request.args.get('id')
+
+    classifySubtitle(video_id)
+
     return render_template('play.html', video_id=video_id)
