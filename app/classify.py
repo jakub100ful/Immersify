@@ -20,7 +20,8 @@ def classifySubtitle(video_id):
     for caption in vtt:
         print(caption.text)
         emotion = decideEmotion(caption.text)
-        caption.text = '<c.{0}>{1}</c>'.format(emotion.lower(), caption.text)
+        caption.text = '<{0}>{1}</{2}>'.format(
+            emotion.lower(), caption.text, emotion.lower())
 
     vtt.save(
         './static/videos/{}/{}_emotive_subtitles.vtt'.format(video_id, video_id))
