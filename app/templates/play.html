@@ -91,7 +91,7 @@
         </h1>
         <div id="collapseOne" class="accordion-collapse collapse show bg-dark" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <div class="container">
+            <div class="container" id="subtitle-settings-container">
               <!-- Default switch -->
               <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="toggle-subtitle-check" checked>
@@ -100,30 +100,30 @@
               <div class="row text-center">
                 <div class="col">
                   <h2>
-                    <sad>
+                    <h3>
                     Sad
-                    </sad>
+                    </h3>
                   </h2>
                 </div>
                 <div class="col">
                   <h2>
-                    <happy>
+                    <h3>
                     Happy
-                    </happy>
+                    </h3>
                   </h2>
                 </div>
                 <div class="col">
                   <h2>
-                    <fear>
-                    Fear
-                    </fear>
+                    <h3>
+                    Fearful
+                    </h3>
                   </h2>
                 </div>
                 <div class="col">
                   <h2>
-                    <anger>
-                    Anger
-                    </anger>
+                    <h3>
+                    Angry
+                    </h3>
                   </h2>
                 </div>
               </div>
@@ -136,90 +136,90 @@
               {# Sad Subtitle Settings #}
                 <div class="col">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="sad-downward-check" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="sad-downward-check" name="--sad-animation-downward-state" checked>
                     <label class="form-check-label" for="flexCheckDefault">
                       Downward Movement
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="sad-fadeout-check" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="sad-fadeout-check" name="--sad-animation-fadeout-state" checked>
                     <label class="form-check-label" for="flexCheckChecked">
                       Fade Out
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="sad-squish-check" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="sad-squish-check" name="--sad-animation-squish-state" checked>
                     <label class="form-check-label" for="flexCheckChecked">
                       Text Height Squish
                     </label>
                   </div>
-                  <input type="color" id="sad-colour-pick" name="sad-colour" value="blue">
+                  <input type="color" id="sad-colour-pick" name="--sad-colour" value="blue">
                 </div>
                 {# Happy Subtitle Settings #}
                 <div class="col">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="happy-upward-check" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="happy-upward-check" name="--happy-animation-upward-state" checked>
                     <label class="form-check-label" for="flexCheckDefault">
                       Upward Movement
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="happy-fadeout-check" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="happy-fadeout-check" name="--happy-animation-fadeout-state" checked>
                     <label class="form-check-label" for="flexCheckChecked">
                       Fade Out
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="happy-stretch-check" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="happy-stretch-check" name="--happy-animation-stretch-state" checked>
                     <label class="form-check-label" for="flexCheckChecked">
                       Text Height Stretch
                     </label>
                   </div>
-                  <input type="color" id="happy-colour-pick" name="sad-colour" value="seagreen">
+                  <input type="color" id="happy-colour-pick" name="--happy-colour" value="seagreen">
                 </div>
                 {# Fear Subtitle Settings #}
                 <div class="col">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="fear-heartbeat-check" name="--fear-animation-heartbeat-state" checked>
                     <label class="form-check-label" for="flexCheckDefault">
                       Heart Beat
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="fear-fadeout-check" name="--fear-animation-fadeout-state" checked>
                     <label class="form-check-label" for="flexCheckChecked">
                       Fade Out
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="fear-shake-check" name="--fear-animation-shake-state" checked>
                     <label class="form-check-label" for="flexCheckChecked">
                       Text Shake
                     </label>
                   </div>
-                  <input type="color" id="fear-colour-pick" name="fear-colour" value="orange">
+                  <input type="color" id="fear-colour-pick" name="--fear-colour" value="orange">
                 </div>
                 {# Anger Subtitle Settings #}
                 <div class="col">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="anger-heartbeat-check" name="--anger-animation-heartbeat-state" checked>
                     <label class="form-check-label" for="flexCheckDefault">
                       Heart Beat
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="anger-fadeout-check" name="--anger-animation-fadeout-state" checked>
                     <label class="form-check-label" for="flexCheckChecked">
                       Fade Out
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="anger-shake-check" name="--anger-animation-shake-state" checked>
                     <label class="form-check-label" for="flexCheckChecked">
                       Text Shake
                     </label>
                   </div>
-                  <input type="color" id="anger-colour-pick" name="anger-colour" value="red">
+                  <input type="color" id="anger-colour-pick" name="--anger-colour" value="red">
                 </div>
               </div>
             </div>
@@ -257,76 +257,37 @@
             document.getElementById("display").style.visibility = "hidden";
           }
         });
-
-        // Sad Emotion Animations
-
-        sad_fadeout_check = document.getElementById("sad-fadeout-check");
-
-        sad_fadeout_check.addEventListener("change", function() {
-          if (this.checked) {
-            document.documentElement.style.setProperty('--sad-animation-fadeout-state', "running");
-          }else {
-            document.documentElement.style.setProperty('--sad-animation-fadeout-state', "paused");
-          }
-        });
         
-        sad_downward_check = document.getElementById("sad-downward-check");
+        // SUBTITLE SETTINGS SELECTOR
 
-        sad_downward_check.addEventListener("change", function() {
-          if (this.checked) {
-            document.documentElement.style.setProperty('--sad-animation-downward-state', "running");
-          }else {
-            document.documentElement.style.setProperty('--sad-animation-downward-state', "paused");
+        var subtitle_settings_container = document.getElementById("subtitle-settings-container");
+
+        subtitle_settings_container.querySelectorAll("input").forEach(input => {
+
+          // All Checkbox Inputs
+          if (input.type === "checkbox"){
+            input.addEventListener('change', function() {
+              if (this.checked) {
+                document.documentElement.style.setProperty(this.name, "running");
+              }else {
+                document.documentElement.style.setProperty(this.name, "paused");
+              }
+            })
+          // All Colour Inputs
+          }else if (input.type === "color"){
+            input.addEventListener('change', function() {
+              document.documentElement.style.setProperty(this.name, this.value);
+            })
+            // TODO: RANGE INPUTS
+          }else if (input.type === "range"){
+            input.addEventListener('input', function() {
+              value = this.value;
+              document.documentElement.style.setProperty(this.name, this.value);
+            })
           }
+          
         });
 
-        sad_squish_check = document.getElementById("sad-squish-check");
-
-        sad_squish_check.addEventListener("change", function() {
-          if (this.checked) {
-            document.documentElement.style.setProperty('--sad-animation-squish-state', "running");
-          }else {
-            document.documentElement.style.setProperty('--sad-animation-squish-state', "paused");
-          }
-        });
-
-        sad_colour_pick = document.getElementById("sad-colour-pick");
-
-        sad_colour_pick.addEventListener("change", function() {
-          document.documentElement.style.setProperty('--sad-colour', this.value);
-        });
-
-        // Happy Emotion Animations
-
-        happy_upward_check = document.getElementById("happy-upward-check");
-
-        happy_upward_check.addEventListener("change", function() {
-          if (this.checked) {
-            document.documentElement.style.setProperty('--happy-animation-upward-state', "running");
-          }else {
-            document.documentElement.style.setProperty('--happy-animation-upward-state', "paused");
-          }
-        });
-
-        happy_stretch_check = document.getElementById("happy-stretch-check");
-
-        happy_stretch_check.addEventListener("change", function() {
-          if (this.checked) {
-            document.documentElement.style.setProperty('--happy-animation-enlarge-state', "running");
-          }else {
-            document.documentElement.style.setProperty('--happy-animation-enlarge-state', "paused");
-          }
-        });
-        
-        happy_fadeout_check = document.getElementById("happy-fadeout-check");
-
-        happy_fadeout_check.addEventListener("change", function() {
-          if (this.checked) {
-            document.documentElement.style.setProperty('--happy-animation-fadeout-state', "running");
-          }else {
-            document.documentElement.style.setProperty('--happy-animation-fadeout-state', "paused");
-          }
-        });
       </script>
     </div>
   </body>

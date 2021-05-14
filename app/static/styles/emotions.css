@@ -3,7 +3,7 @@
 
   --happy-colour: seagreen;
   --happy-animation-upward-state: running;
-  --happy-animation-enlarge-state: running;
+  --happy-animation-stretch-state: running;
   --happy-animation-fadeout-state: running;
 
   --sad-colour: blue;
@@ -27,7 +27,7 @@
   }
 }
 
-@keyframes enlarge {
+@keyframes stretch {
   from {
     transform: scaleY(1);
   }
@@ -69,10 +69,10 @@
 #happy {
   display: inline-block;
   color: var(--happy-colour);
-  animation: upward var(--animation-duration), enlarge var(--animation-duration),
+  animation: upward var(--animation-duration), stretch var(--animation-duration),
     fadeout var(--animation-duration);
   animation-play-state: var(--happy-animation-upward-state),
-    var(--happy-animation-enlarge-state), var(--happy-animation-fadeout-state);
+    var(--happy-animation-stretch-state), var(--happy-animation-fadeout-state);
   transition: 0.3s;
 }
 #sad {
@@ -85,7 +85,7 @@
   transition: 0.3s;
 }
 
-#angry {
+#anger {
   color: var(--anger-colour);
 }
 #surprise {
