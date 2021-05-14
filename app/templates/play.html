@@ -148,6 +148,7 @@
                       Text Height Squish
                     </label>
                   </div>
+                  <input type="color" id="sad-colour-pick" name="sad-colour" value="blue">
                 </div>
                 {# Happy Subtitle Settings #}
                 <div class="col">
@@ -169,6 +170,7 @@
                       Text Height Stretch
                     </label>
                   </div>
+                  <input type="color" id="happy-colour-pick" name="sad-colour" value="seagreen">
                 </div>
                 {# Fear Subtitle Settings #}
                 <div class="col">
@@ -190,6 +192,7 @@
                       Text Shake
                     </label>
                   </div>
+                  <input type="color" id="fear-colour-pick" name="fear-colour" value="orange">
                 </div>
                 {# Anger Subtitle Settings #}
                 <div class="col">
@@ -211,6 +214,7 @@
                       Text Shake
                     </label>
                   </div>
+                  <input type="color" id="anger-colour-pick" name="anger-colour" value="red">
                 </div>
               </div>
             </div>
@@ -239,6 +243,8 @@
           }
         });
 
+        // Sad Emotion Animations
+
         sad_fadeout_check = document.getElementById("sad-fadeout-check");
 
         sad_fadeout_check.addEventListener("change", function() {
@@ -247,6 +253,32 @@
           }else {
             document.documentElement.style.setProperty('--sad-animation-fadeout-state', "paused");
           }
+        });
+        
+        sad_downward_check = document.getElementById("sad-downward-check");
+
+        sad_downward_check.addEventListener("change", function() {
+          if (this.checked) {
+            document.documentElement.style.setProperty('--sad-animation-downward-state', "running");
+          }else {
+            document.documentElement.style.setProperty('--sad-animation-downward-state', "paused");
+          }
+        });
+
+        sad_squish_check = document.getElementById("sad-squish-check");
+
+        sad_squish_check.addEventListener("change", function() {
+          if (this.checked) {
+            document.documentElement.style.setProperty('--sad-animation-squish-state', "running");
+          }else {
+            document.documentElement.style.setProperty('--sad-animation-squish-state', "paused");
+          }
+        });
+
+        sad_colour_pick = document.getElementById("sad-colour-pick");
+
+        sad_colour_pick.addEventListener("change", function() {
+          document.documentElement.style.setProperty('--sad-colour', this.value);
         });
 
         // Happy Emotion Animations
@@ -268,6 +300,16 @@
             document.documentElement.style.setProperty('--happy-animation-enlarge-state', "running");
           }else {
             document.documentElement.style.setProperty('--happy-animation-enlarge-state', "paused");
+          }
+        });
+        
+        happy_fadeout_check = document.getElementById("happy-fadeout-check");
+
+        happy_fadeout_check.addEventListener("change", function() {
+          if (this.checked) {
+            document.documentElement.style.setProperty('--happy-animation-fadeout-state', "running");
+          }else {
+            document.documentElement.style.setProperty('--happy-animation-fadeout-state', "paused");
           }
         });
       </script>

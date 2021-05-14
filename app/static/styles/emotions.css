@@ -1,13 +1,21 @@
 :root {
   --animation-duration: 0s;
 
+  --happy-colour: seagreen;
   --happy-animation-upward-state: running;
   --happy-animation-enlarge-state: running;
   --happy-animation-fadeout-state: running;
 
+  --sad-colour: blue;
   --sad-animation-downward-state: running;
   --sad-animation-fadeout-state: running;
   --sad-animation-squish-state: running;
+
+  --fear-colour: orange;
+
+  --anger-colour: red;
+
+  --surprise-colour: yellow;
 }
 
 @keyframes upward {
@@ -58,18 +66,18 @@
   }
 }
 
-happy {
+#happy {
   display: inline-block;
-  color: seagreen;
+  color: var(--happy-colour);
   animation: upward var(--animation-duration), enlarge var(--animation-duration),
     fadeout var(--animation-duration);
   animation-play-state: var(--happy-animation-upward-state),
     var(--happy-animation-enlarge-state), var(--happy-animation-fadeout-state);
   transition: 0.3s;
 }
-sad {
+#sad {
   display: inline-block;
-  color: blue;
+  color: var(--sad-colour);
   animation: downward var(--animation-duration),
     fadeout var(--animation-duration), squish var(--animation-duration);
   animation-play-state: var(--sad-animation-downward-state),
@@ -77,9 +85,12 @@ sad {
   transition: 0.3s;
 }
 
-angry {
-  color: red;
+#angry {
+  color: var(--anger-colour);
 }
-surprise {
-  color: yellow;
+#surprise {
+  color: var(--surprise-colour);
+}
+#fear {
+  color: var(--fear-colour);
 }
