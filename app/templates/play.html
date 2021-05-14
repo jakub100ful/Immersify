@@ -92,6 +92,11 @@
         <div id="collapseOne" class="accordion-collapse collapse show bg-dark" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
           <div class="accordion-body">
             <div class="container">
+              <!-- Default switch -->
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="toggle-subtitle-check" checked>
+                <label class="custom-control-label" for="toggle-subtitle-check">Toggle Subtitles</label>
+              </div>
               <div class="row text-center">
                 <div class="col">
                   <h2>
@@ -240,6 +245,16 @@
             document.getElementById("display").innerHTML = cues[0].text;
           }else{
             document.getElementById("display").innerHTML = "";
+          }
+        });
+
+        toggle_subtitle_check = document.getElementById("toggle-subtitle-check");
+
+        toggle_subtitle_check.addEventListener("change", function() {
+          if (this.checked) {
+            document.getElementById("display").style.visibility = "visible";
+          }else {
+            document.getElementById("display").style.visibility = "hidden";
           }
         });
 
