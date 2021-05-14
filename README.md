@@ -1,6 +1,6 @@
 # Immersify
 
-A final year project.
+Immersify is a video player that aims to improve the viewing experience by delivering emotive subtitles that can be customised. It uses machine learning to analyse any scripted video and the subtitle visualisation style can be fully customised.
 
 # Prerequisities
 
