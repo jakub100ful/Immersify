@@ -1,9 +1,82 @@
+:root {
+  --animation-duration: 0s;
+
+  --happy-animation-upward-state: running;
+  --happy-animation-enlarge-state: running;
+  --happy-animation-fadeout-state: running;
+
+  --sad-animation-downward-state: running;
+  --sad-animation-fadeout-state: running;
+  --sad-animation-squish-state: running;
+}
+
+@keyframes upward {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes enlarge {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(1.1);
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes downward {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes squish {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0.7);
+  }
+}
+
 happy {
+  display: inline-block;
   color: seagreen;
+  animation: upward var(--animation-duration), enlarge var(--animation-duration),
+    fadeout var(--animation-duration);
+  animation-play-state: var(--happy-animation-upward-state),
+    var(--happy-animation-enlarge-state), var(--happy-animation-fadeout-state);
+  transition: 0.3s;
 }
 sad {
+  display: inline-block;
   color: blue;
+  animation: downward var(--animation-duration),
+    fadeout var(--animation-duration), squish var(--animation-duration);
+  animation-play-state: var(--sad-animation-downward-state),
+    var(--sad-animation-fadeout-state), var(--sad-animation-squish-state);
+  transition: 0.3s;
 }
+
 angry {
   color: red;
 }

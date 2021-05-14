@@ -3,10 +3,8 @@
   <head>
     <title>My Webpage</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/emotions.css') }}">
   </head>
@@ -39,7 +37,7 @@
         </div>
       </nav>
     </div>
-    <div class="card" id="video-card">
+    <div class="card text-white bg-dark mb-3" id="video-card">
       <div class="card-body" id="body">
       <!-- Video -->
 
@@ -84,24 +82,140 @@
         </div>
       </div>
     </div>
-    <div class="container" id="settings-container">
-      <div id="accordion">
-        <div class="card text-white bg-dark mb-3">
-          <div class="card-header" id="headingOne">
-            <h5 class="mb-0">
-              <button class="btn btn-link" data-toggle="collapse" data-target="#settings" aria-expanded="true" aria-controls="collapseOne">
-                <div class="h4 d-flex">
-                  <div>Subtitle Settings</div>
-                  <i class="bi bi-caret-down-fill ml-1"></i>
+    <div class="accordion text-white w-75 m-auto" id="accordion-settings">
+      <div class="accordion-item bg-secondary">
+        <h1 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Subtitle Settings
+          </button>
+        </h1>
+        <div id="collapseOne" class="accordion-collapse collapse show bg-dark" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="container">
+              <div class="row text-center">
+                <div class="col">
+                  <h2>
+                    <sad>
+                    Sad
+                    </sad>
+                  </h2>
                 </div>
-              </button>
-            </h5>
+                <div class="col">
+                  <h2>
+                    <happy>
+                    Happy
+                    </happy>
+                  </h2>
+                </div>
+                <div class="col">
+                  <h2>
+                    <fear>
+                    Fear
+                    </fear>
+                  </h2>
+                </div>
+                <div class="col">
+                  <h2>
+                    <anger>
+                    Anger
+                    </anger>
+                  </h2>
+                </div>
+              </div>
+              <div class="row text-center">
+                <div class="col">
+                  <h4>Animation</h4>
+                </div>
+              </div>
+              <div class="row text-left justify-content-center">
+              {# Sad Subtitle Settings #}
+                <div class="col">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="sad-downward-check" checked>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Downward Movement
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="sad-fadeout-check" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Fade Out
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="sad-squish-check" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Text Height Squish
+                    </label>
+                  </div>
+                </div>
+                {# Happy Subtitle Settings #}
+                <div class="col">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="happy-upward-check" checked>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Upward Movement
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="happy-fadeout-check" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Fade Out
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="happy-stretch-check" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Text Height Stretch
+                    </label>
+                  </div>
+                </div>
+                {# Fear Subtitle Settings #}
+                <div class="col">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Heart Beat
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Fade Out
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Text Shake
+                    </label>
+                  </div>
+                </div>
+                {# Anger Subtitle Settings #}
+                <div class="col">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Heart Beat
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Fade Out
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Text Shake
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          </div>
-  
-          <div id="settings" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">   
-            <button type="button" class="btn btn-light">Toggle</button>
-          </div>
+        </div>
       </div>
     </div>
 
@@ -115,9 +229,45 @@
         track.addEventListener('cuechange', function () {
           let cues = track.activeCues;  // array of current cues
           if (cues.length != 0){
+            // Calculate animation time from subtitle duration and convert to miliseconds
+            let animationTime = Math.ceil((cues[0].endTime-cues[0].startTime)*1000)+10;
+            console.log(animationTime);
+            document.documentElement.style.setProperty('--animation-duration', animationTime+"ms");
             document.getElementById("display").innerHTML = cues[0].text;
           }else{
             document.getElementById("display").innerHTML = "";
+          }
+        });
+
+        sad_fadeout_check = document.getElementById("sad-fadeout-check");
+
+        sad_fadeout_check.addEventListener("change", function() {
+          if (this.checked) {
+            document.documentElement.style.setProperty('--sad-animation-fadeout-state', "running");
+          }else {
+            document.documentElement.style.setProperty('--sad-animation-fadeout-state', "paused");
+          }
+        });
+
+        // Happy Emotion Animations
+
+        happy_upward_check = document.getElementById("happy-upward-check");
+
+        happy_upward_check.addEventListener("change", function() {
+          if (this.checked) {
+            document.documentElement.style.setProperty('--happy-animation-upward-state', "running");
+          }else {
+            document.documentElement.style.setProperty('--happy-animation-upward-state', "paused");
+          }
+        });
+
+        happy_stretch_check = document.getElementById("happy-stretch-check");
+
+        happy_stretch_check.addEventListener("change", function() {
+          if (this.checked) {
+            document.documentElement.style.setProperty('--happy-animation-enlarge-state', "running");
+          }else {
+            document.documentElement.style.setProperty('--happy-animation-enlarge-state', "paused");
           }
         });
       </script>
