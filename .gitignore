@@ -126,3 +126,6 @@ dmypy.json
 
 # Video resources
 /app/static/videos/*
+
+# Mac DS Files
+.DS_Store
