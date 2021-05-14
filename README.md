@@ -27,3 +27,32 @@ You need to ensure that [Python 3.6](https://www.python.org/downloads/) or later
 Ensure that you have installed the neccessary SSL bundle. You can do this either by running the native _Certificates.command_ file in the Python directory found in your Applications folder, or by installing the _certifi_ package through pip.
 
 For more information view this article: https://stackoverflow.com/questions/40684543/how-to-make-python-use-ca-certificates-from-mac-os-truststore
+
+# Usage
+
+To use Immersify, paste `127.0.0.1:5000` in your preferred browser's address bar.
+
+You will be shown a library of available videos.
+
+## Adding Videos
+
+When adding new videos to the video player, a folder must be created within the videos directory. This folder must be named after the video id (vidID for future reference). The vidID name pattern is `vid_n` where `n` is equal to total number of video folders+1. For example, “vid1” is a valid name for the folder, and subsequent folders would be named “vid2”, “vid3”, etc. Inside of this folder, there are several files that need to be provided for the system to recognise the video.
+
+| File Name       | Description                                                                                 | Required |
+| --------------- | ------------------------------------------------------------------------------------------- | -------- |
+| vidID_video     | The video file to be supplied to the video player.                                          | Yes      |
+| vidID_subtitles | The subtitle file to be supplied to the video player.                                       | Yes      |
+| vidID_metadata  | The metadata that contains information about the video to be presented by the video player. | Yes      |
+| vidID_image     | The image file to be supplied as a preview on the home page.                                | No       |
+
+### Metadata File
+
+The metadata file is a JSON file used to give the system information about the video. The video player uses this information for better user experience. The list of keys recognised by the video player can be found in tablex.
+
+| Key         | File Name | Description                                                                         | Required |
+| ----------- | --------- | ----------------------------------------------------------------------------------- | -------- |
+| id          | String    | The **vidID** for this video. Must correspond to the parent folder name.            | Yes      |
+| title       | String    | The title for this video. It could be the name of a movie, or the title of a video. | Yes      |
+| description | String    | A short description for the video.                                                  | Yes      |
+| language    | String    | The language of the video. Must adhere to the **ISO 639-1:2002** standard.          | Yes      |
+| image       | Boolean   | Should be `true` if an image is provided. Default value is `false`.                 | No       |
