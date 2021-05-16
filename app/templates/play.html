@@ -82,6 +82,7 @@
         </div>
       </div>
     </div>
+    <div class="container"><p class="text-white" id="emotion-confidence-debug" style="visibility: hidden;"></p></div>
     <div class="accordion text-white w-75 m-auto" id="accordion-settings">
       <div class="accordion-item bg-secondary">
         <h1 class="accordion-header" id="headingOne">
@@ -96,6 +97,11 @@
               <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="toggle-subtitle-check" checked>
                 <label class="custom-control-label" for="toggle-subtitle-check">Toggle Subtitles</label>
+              </div>
+               <!-- Default switch -->
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="toggle-emotion-debug-check">
+                <label class="custom-control-label" for="toggle-emotion-debug-check">Toggle Emotion Debug</label>
               </div>
               <div class="row text-center">
                 <div class="col">
@@ -430,8 +436,10 @@
         tracks = document.querySelector('video').textTracks;
         track = tracks[0];
         let subtitle_container = document.getElementById("display"); // HTML container containing the subtitles
+        let emotion_debug_container = document.getElementById("emotion-confidence-debug"); // HTML container containing emotion debug information about subtitles
 
         track.addEventListener('cuechange', function () {
+          emotion_debug_container.innerHTML = "";
           subtitle_container.innerHTML = "";
           
           let cues = track.activeCues;  // array of current cues
@@ -445,6 +453,7 @@
             let animationTime = Math.ceil((cue.endTime-cue.startTime)*1000)+10;
             document.documentElement.style.setProperty('--animation-duration', animationTime+"ms"); // update the animation time to match the current cue duration
 
+            emotion_debug_container.innerHTML = cue.id;
             let x = new DOMParser().parseFromString(cue.text, 'text/html').body.childNodes;
 
             const span = (text, index) => {
@@ -479,11 +488,20 @@
             // subtitle_container.innerHTML = cues[0].text;
           }else{
             // If no cue is present erase the content of the HTML subtitle container
+            emotion_debug_container.innerHTML = "";
             subtitle_container.innerHTML = "";
           }
         });
-
+        toggle_emotion_debug_check = document.getElementById("toggle-emotion-debug-check");
         toggle_subtitle_check = document.getElementById("toggle-subtitle-check");
+
+        toggle_emotion_debug_check.addEventListener("change", function() {
+          if (this.checked) {
+            document.getElementById("emotion-confidence-debug").style.visibility = "visible";
+          }else {
+            document.getElementById("emotion-confidence-debug").style.visibility = "hidden";
+          }
+        });
 
         toggle_subtitle_check.addEventListener("change", function() {
           if (this.checked) {
@@ -515,9 +533,7 @@
                 }
               }
             })
-            
           })
-          
         })
 
         subtitle_settings_container.querySelectorAll("input").forEach(input => {

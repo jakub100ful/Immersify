@@ -2,16 +2,20 @@ import webvtt
 import text2emotion as te
 import operator
 import os.path
+import json
 
 
 def decideEmotion(text):
     # TODO: Filter
     emotion_list = te.get_emotion(text)
     print(emotion_list)
-    selected_emotion = max(emotion_list.items(),
-                           key=operator.itemgetter(1))[0]
-    if(selected_emotion):
-        return selected_emotion
+    emotion_dict = {
+        "selected_emotion": (max(emotion_list.items(),
+                                 key=operator.itemgetter(1))[0]),
+        "emotion_list": emotion_list
+    }
+
+    return emotion_dict
 
 
 def classifySubtitle(video_id):
@@ -30,8 +34,15 @@ def classifySubtitle(video_id):
 
         for caption in vtt:
             print(caption.text)
-            emotion = decideEmotion(caption.text)
-            caption.text = "<p id='{0}'>{1}</p>".format(
-                emotion.lower(), caption.text)
+            emotion_dict = decideEmotion(caption.text)
+
+            if (emotion_dict["selected_emotion"]):
+                caption.text = "<p id='{0}'>{1}</p>".format(
+                    emotion_dict["selected_emotion"].lower(), caption.text)
+            else:
+                caption.text = "<p>{1}</p>".format(caption.text)
+
+            caption.identifier = "Emotions: " + \
+                json.dumps(emotion_dict["emotion_list"])
 
         vtt.save(emotive_subtitle_path)
