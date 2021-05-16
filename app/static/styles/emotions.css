@@ -1,21 +1,56 @@
 :root {
+  /* Animation Properties */
   --animation-duration: 0s;
 
+  /* HAPPY PROPERTIES */
   --happy-colour: seagreen;
+  --happy-animation-downward-state: paused;
   --happy-animation-upward-state: running;
-  --happy-animation-stretch-state: running;
   --happy-animation-fadeout-state: running;
+  --happy-animation-stretch-state: running;
+  --happy-animation-squish-state: paused;
+  --happy-animation-shake-state: paused;
+  --happy-animation-heartbeat-state: paused;
 
+  /* SAD PROPERTIES */
   --sad-colour: blue;
   --sad-animation-downward-state: running;
+  --sad-animation-upward-state: paused;
   --sad-animation-fadeout-state: running;
+  --sad-animation-stretch-state: paused;
   --sad-animation-squish-state: running;
+  --sad-animation-shake-state: paused;
+  --sad-animation-heartbeat-state: paused;
 
+  /* FEAR PROPERTIES */
   --fear-colour: orange;
+  --fear-animation-downward-state: paused;
+  --fear-animation-upward-state: paused;
+  --fear-animation-fadeout-state: paused;
+  --fear-animation-stretch-state: paused;
+  --fear-animation-squish-state: paused;
+  --fear-animation-shake-state: running;
+  --fear-animation-heartbeat-state: running;
 
+  /* ANGER PROPERTIES */
   --anger-colour: red;
+  --anger-animation-downward-state: paused;
+  --anger-animation-upward-state: paused;
+  --anger-animation-fadeout-state: paused;
+  --anger-animation-stretch-state: paused;
+  --anger-animation-squish-state: paused;
+  --anger-animation-shake-state: running;
+  --anger-animation-heartbeat-state: running;
 
+  /* SURPRISE PROPERTIES */
   --surprise-colour: yellow;
+  --surprise-animation-downward-state: paused;
+  --surprise-animation-upward-state: paused;
+  --surprise-animation-fadeout-state: paused;
+  --surprise-animation-stretch-state: running;
+  --surprise-animation-squish-state: paused;
+  --surprise-animation-shake-state: running;
+  --surprise-animation-heartbeat-state: paused;
 }
 
 @keyframes upward {
@@ -66,31 +101,160 @@
   }
 }
 
-#happy {
+@keyframes shake {
+  100% {
+    top: -5px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+      0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+      0 50px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.happy {
   display: inline-block;
   color: var(--happy-colour);
-  animation: upward var(--animation-duration), stretch var(--animation-duration),
-    fadeout var(--animation-duration);
-  animation-play-state: var(--happy-animation-upward-state),
-    var(--happy-animation-stretch-state), var(--happy-animation-fadeout-state);
+  animation: downward var(--animation-duration),
+    upward var(--animation-duration), fadeout var(--animation-duration),
+    stretch var(--animation-duration), squish var(--animation-duration),
+    heartbeat var(--animation-duration) infinite;
+  animation-play-state: var(--happy-animation-downward-state),
+    var(--happy-animation-upward-state), var(--happy-animation-fadeout-state),
+    var(--happy-animation-stretch-state), var(--happy-animation-squish-state),
+    var(--happy-animation-heartbeat-state);
   transition: 0.3s;
 }
-#sad {
+.sad {
   display: inline-block;
   color: var(--sad-colour);
   animation: downward var(--animation-duration),
-    fadeout var(--animation-duration), squish var(--animation-duration);
+    upward var(--animation-duration), fadeout var(--animation-duration),
+    stretch var(--animation-duration), squish var(--animation-duration),
+    heartbeat var(--animation-duration) infinite;
   animation-play-state: var(--sad-animation-downward-state),
-    var(--sad-animation-fadeout-state), var(--sad-animation-squish-state);
+    var(--sad-animation-upward-state), var(--sad-animation-fadeout-state),
+    var(--sad-animation-stretch-state), var(--sad-animation-squish-state),
+    var(--sad-animation-heartbeat-state);
+  transition: 0.3s;
+}
+.fear {
+  display: inline-block;
+  color: var(--fear-colour);
+  animation: downward var(--animation-duration),
+    upward var(--animation-duration), fadeout var(--animation-duration),
+    stretch var(--animation-duration), squish var(--animation-duration),
+    heartbeat var(--animation-duration) infinite;
+  animation-play-state: var(--fear-animation-downward-state),
+    var(--fear-animation-upward-state), var(--fear-animation-fadeout-state),
+    var(--fear-animation-stretch-state), var(--fear-animation-squish-state),
+    var(--fear-animation-heartbeat-state);
+  transition: 0.3s;
+}
+.anger {
+  display: inline-block;
+  color: var(--anger-colour);
+  animation: downward var(--animation-duration),
+    upward var(--animation-duration), fadeout var(--animation-duration),
+    stretch var(--animation-duration), squish var(--animation-duration),
+    heartbeat var(--animation-duration) infinite;
+  animation-play-state: var(--anger-animation-downward-state),
+    var(--anger-animation-upward-state), var(--anger-animation-fadeout-state),
+    var(--anger-animation-stretch-state), var(--anger-animation-squish-state),
+    var(--anger-animation-heartbeat-state);
+  transition: 0.3s;
+}
+.surprise {
+  display: inline-block;
+  color: var(--surprise-colour);
+  animation: downward var(--animation-duration),
+    upward var(--animation-duration), fadeout var(--animation-duration),
+    stretch var(--animation-duration), squish var(--animation-duration),
+    heartbeat var(--animation-duration) infinite;
+  animation-play-state: var(--surprise-animation-downward-state),
+    var(--surprise-animation-upward-state),
+    var(--surprise-animation-fadeout-state),
+    var(--surprise-animation-stretch-state),
+    var(--surprise-animation-squish-state),
+    var(--surprise-animation-heartbeat-state);
   transition: 0.3s;
 }
 
-#anger {
-  color: var(--anger-colour);
+span.happy span {
+  position: relative;
+  top: 5px;
+  margin-right: 1;
+  display: inline-block;
+  animation: shake 0.3s ease infinite alternate;
+  animation-delay: calc(0.1s * var(--index));
+  animation-play-state: var(--happy-animation-shake-state);
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
 }
-#surprise {
-  color: var(--surprise-colour);
+
+span.sad span {
+  position: relative;
+  top: 5px;
+  margin-right: 1;
+  display: inline-block;
+  animation: shake 0.3s ease infinite alternate;
+  animation-delay: calc(0.1s * var(--index));
+  animation-play-state: var(--sad-animation-shake-state);
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
 }
-#fear {
-  color: var(--fear-colour);
+
+span.fear span {
+  position: relative;
+  top: 5px;
+  margin-right: 1;
+  display: inline-block;
+  animation: shake 0.3s ease infinite alternate;
+  animation-delay: calc(0.1s * var(--index));
+  animation-play-state: var(--fear-animation-shake-state);
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+span.anger span {
+  position: relative;
+  top: 5px;
+  margin-right: 1;
+  display: inline-block;
+  animation: shake 0.3s ease infinite alternate;
+  animation-delay: calc(0.1s * var(--index));
+  animation-play-state: var(--anger-animation-shake-state);
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+span.surprise span {
+  position: relative;
+  top: 5px;
+  margin-right: 1;
+  display: inline-block;
+  animation: shake 0.3s ease infinite alternate;
+  animation-delay: calc(0.1s * var(--index));
+  animation-play-state: var(--surprise-animation-shake-state);
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+span {
+  white-space: pre;
 }

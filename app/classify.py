@@ -1,6 +1,7 @@
 import webvtt
 import text2emotion as te
 import operator
+import os.path
 
 
 def decideEmotion(text):
@@ -14,16 +15,23 @@ def decideEmotion(text):
 
 
 def classifySubtitle(video_id):
-    subtitle_path = "static/videos/{0}/{1}_subtitles.vtt".format(
+
+    emotive_subtitle_path = './static/videos/{}/{}_emotive_subtitles.vtt'.format(
         video_id, video_id)
 
-    vtt = webvtt.read(subtitle_path)
+    if (os.path.exists(emotive_subtitle_path)):
+        print("File already exists.")
 
-    for caption in vtt:
-        print(caption.text)
-        emotion = decideEmotion(caption.text)
-        caption.text = "<p id='{0}'>{1}</p>".format(
-            emotion.lower(), caption.text)
+    else:
+        subtitle_path = "static/videos/{0}/{1}_subtitles.vtt".format(
+            video_id, video_id)
 
-    vtt.save(
-        './static/videos/{}/{}_emotive_subtitles.vtt'.format(video_id, video_id))
+        vtt = webvtt.read(subtitle_path)
+
+        for caption in vtt:
+            print(caption.text)
+            emotion = decideEmotion(caption.text)
+            caption.text = "<p id='{0}'>{1}</p>".format(
+                emotion.lower(), caption.text)
+
+        vtt.save(emotive_subtitle_path)

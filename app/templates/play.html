@@ -126,6 +126,13 @@
                     </h3>
                   </h2>
                 </div>
+                <div class="col">
+                  <h2>
+                    <h3>
+                    Surprised
+                    </h3>
+                  </h2>
+                </div>
               </div>
               <div class="row text-center">
                 <div class="col">
@@ -135,11 +142,25 @@
               <div class="row text-left justify-content-center">
               {# Sad Subtitle Settings #}
                 <div class="col">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="sad-downward-check" name="--sad-animation-downward-state" checked>
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Downward Movement
-                    </label>
+                  <h5>Movement</h5>
+
+                  <div class="form-check movement-setting">
+                      <form>
+                        <input class="form-check-input movement-disabled" type="radio" name="--sad-animation" id="--sad-animation">
+                        <label class="form-check-label" for="--sad-animation">
+                          No Movement
+                        </label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="--sad-animation" id="--sad-animation-upward-state">
+                        <label class="form-check-label" for="--sad-animation-upward-state">
+                          Upward
+                        </label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="--sad-animation" id="--sad-animation-downward-state" checked>
+                        <label class="form-check-label" for="--sad-animation-downward-state">
+                          Downward
+                        </label>
+                      </form>
                   </div>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="sad-fadeout-check" name="--sad-animation-fadeout-state" checked>
@@ -148,47 +169,125 @@
                     </label>
                   </div>
                   <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="sad-squish-check" name="--sad-animation-stretch-state">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Text Height Stretch
+                    </label>
+                  </div>
+                  <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="sad-squish-check" name="--sad-animation-squish-state" checked>
                     <label class="form-check-label" for="flexCheckChecked">
                       Text Height Squish
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="fear-shake-check" name="--sad-animation-shake-state">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Text Shake
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="fear-shake-check" name="--sad-animation-heartbeat-state">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Heartbeat
                     </label>
                   </div>
                   <input type="color" id="sad-colour-pick" name="--sad-colour" value="blue">
                 </div>
                 {# Happy Subtitle Settings #}
                 <div class="col">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="happy-upward-check" name="--happy-animation-upward-state" checked>
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Upward Movement
-                    </label>
+                  <h5>Movement</h5>
+
+                  <div class="form-check movement-setting">
+                      <form>
+                        <input class="form-check-input movement-disabled" type="radio" name="--happy-animation" id="--happy-animation">
+                        <label class="form-check-label" for="--happy-animation">
+                          No Movement
+                        </label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="--happy-animation" id="--happy-animation-upward-state" checked>
+                        <label class="form-check-label" for="--happy-animation-upward-state">
+                          Upward
+                        </label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="--happy-animation" id="--happy-animation-downward-state">
+                        <label class="form-check-label" for="--happy-animation-downward-state">
+                          Downward
+                        </label>
+                      </form>
                   </div>
+
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="happy-fadeout-check" name="--happy-animation-fadeout-state" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="happy-fadeout-check" name="--happy-animation-fadeout-state">
                     <label class="form-check-label" for="flexCheckChecked">
                       Fade Out
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="happy-stretch-check" name="--happy-animation-stretch-state" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="happy-squish-check" name="--happy-animation-stretch-state" checked>
                     <label class="form-check-label" for="flexCheckChecked">
                       Text Height Stretch
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="happy-squish-check" name="--happy-animation-squish-state">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Text Height Squish
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="happy-shake-check" name="--happy-animation-shake-state">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Text Shake
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="happy-shake-check" name="--happy-animation-heartbeat-state">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Heartbeat
                     </label>
                   </div>
                   <input type="color" id="happy-colour-pick" name="--happy-colour" value="seagreen">
                 </div>
                 {# Fear Subtitle Settings #}
                 <div class="col">
+                  <h5>Movement</h5>
+
+                  <div class="form-check movement-setting">
+                      <form>
+                        <input class="form-check-input movement-disabled" type="radio" name="--fear-animation" id="--fear-animation" checked>
+                        <label class="form-check-label" for="--fear-animation">
+                          No Movement
+                        </label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="--fear-animation" id="--fear-animation-upward-state">
+                        <label class="form-check-label" for="--fear-animation-upward-state">
+                          Upward
+                        </label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="--fear-animation" id="--fear-animation-downward-state">
+                        <label class="form-check-label" for="--fear-animation-downward-state">
+                          Downward
+                        </label>
+                      </form>
+                  </div>
+
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="fear-heartbeat-check" name="--fear-animation-heartbeat-state" checked>
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Heart Beat
+                    <input class="form-check-input" type="checkbox" value="" id="fear-fadeout-check" name="--fear-animation-fadeout-state">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Fade Out
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="fear-fadeout-check" name="--fear-animation-fadeout-state" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="fear-squish-check" name="--fear-animation-stretch-state">
                     <label class="form-check-label" for="flexCheckChecked">
-                      Fade Out
+                      Text Height Stretch
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="fear-squish-check" name="--fear-animation-squish-state">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Text Height Squish
                     </label>
                   </div>
                   <div class="form-check">
@@ -197,20 +296,53 @@
                       Text Shake
                     </label>
                   </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="fear-shake-check" name="--fear-animation-heartbeat-state" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Heartbeat
+                    </label>
+                  </div>
                   <input type="color" id="fear-colour-pick" name="--fear-colour" value="orange">
                 </div>
                 {# Anger Subtitle Settings #}
                 <div class="col">
+
+                  <h5>Movement</h5>
+
+                  <div class="form-check movement-setting">
+                      <form>
+                        <input class="form-check-input movement-disabled" type="radio" name="--anger-animation" id="--anger-animation" checked>
+                        <label class="form-check-label" for="--fear-animation">
+                          No Movement
+                        </label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="--anger-animation" id="--anger-animation-upward-state">
+                        <label class="form-check-label" for="--anger-animation-upward-state">
+                          Upward
+                        </label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="--anger-animation" id="--anger-animation-downward-state">
+                        <label class="form-check-label" for="--anger-animation-downward-state">
+                          Downward
+                        </label>
+                      </form>
+                  </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="anger-heartbeat-check" name="--anger-animation-heartbeat-state" checked>
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Heart Beat
+                    <input class="form-check-input" type="checkbox" value="" id="anger-fadeout-check" name="--anger-animation-fadeout-state">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Fade Out
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="anger-fadeout-check" name="--anger-animation-fadeout-state" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="anger-squish-check" name="--anger-animation-stretch-state">
                     <label class="form-check-label" for="flexCheckChecked">
-                      Fade Out
+                      Text Height Stretch
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="anger-squish-check" name="--anger-animation-squish-state">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Text Height Squish
                     </label>
                   </div>
                   <div class="form-check">
@@ -219,7 +351,69 @@
                       Text Shake
                     </label>
                   </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="anger-shake-check" name="--anger-animation-heartbeat-state" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Heartbeat
+                    </label>
+                  </div>
                   <input type="color" id="anger-colour-pick" name="--anger-colour" value="red">
+                </div>
+
+                {# Surprise Subtitle Settings #}
+                <div class="col">
+
+                  <h5>Movement</h5>
+
+                  <div class="form-check movement-setting">
+                      <form>
+                        <input class="form-check-input movement-disabled" type="radio" name="--surprise-animation" id="--surprise-animation" checked>
+                        <label class="form-check-label" for="--surprise-animation">
+                          No Movement
+                        </label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="--surprise-animation" id="--surprise-animation-upward-state">
+                        <label class="form-check-label" for="--surprise-animation-upward-state">
+                          Upward
+                        </label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="--surprise-animation" id="--surprise-animation-downward-state">
+                        <label class="form-check-label" for="--surprise-animation-downward-state">
+                          Downward
+                        </label>
+                      </form>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="surprise-fadeout-check" name="--surprise-animation-fadeout-state">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Fade Out
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="surprise-squish-check" name="--surprise-animation-stretch-state" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Text Height Stretch
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="surprise-squish-check" name="--surprise-animation-squish-state">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Text Height Squish
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="surprise-shake-check" name="--surprise-animation-shake-state" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Text Shake
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="surprise-shake-check" name="--surprise-animation-heartbeat-state">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Heartbeat
+                    </label>
+                  </div>
+                  <input type="color" id="surprise-colour-pick" name="--surprise-colour" value="yellow">
                 </div>
               </div>
             </div>
@@ -235,16 +429,57 @@
 
         tracks = document.querySelector('video').textTracks;
         track = tracks[0];
+        let subtitle_container = document.getElementById("display"); // HTML container containing the subtitles
+
         track.addEventListener('cuechange', function () {
+          subtitle_container.innerHTML = "";
+          
           let cues = track.activeCues;  // array of current cues
+          let cue = cues[0]; // current cue
+          
+          console.log(cues);
+          console.log(cue);
+
           if (cues.length != 0){
             // Calculate animation time from subtitle duration and convert to miliseconds
-            let animationTime = Math.ceil((cues[0].endTime-cues[0].startTime)*1000)+10;
-            console.log(animationTime);
-            document.documentElement.style.setProperty('--animation-duration', animationTime+"ms");
-            document.getElementById("display").innerHTML = cues[0].text;
+            let animationTime = Math.ceil((cue.endTime-cue.startTime)*1000)+10;
+            document.documentElement.style.setProperty('--animation-duration', animationTime+"ms"); // update the animation time to match the current cue duration
+
+            let x = new DOMParser().parseFromString(cue.text, 'text/html').body.childNodes;
+
+            const span = (text, index) => {
+                const node = document.createElement('span');
+                node.textContent = text;
+                node.style.setProperty('--index', index+1)
+                return node
+              }
+
+              
+
+            let parent = document.createElement('p');
+            parent = subtitle_container.appendChild(parent);
+
+            console.log(x);
+
+            x.forEach(x =>{
+              child = document.createElement('span');
+
+              if(x.id){
+                child.classList.add(x.id);
+              }
+
+              [...x.innerText].map(span).forEach(el => {
+                  child.appendChild(el)
+                })
+
+            parent.appendChild(child);
+            })
+
+            // Cue gets written to the HTML subtitle container
+            // subtitle_container.innerHTML = cues[0].text;
           }else{
-            document.getElementById("display").innerHTML = "";
+            // If no cue is present erase the content of the HTML subtitle container
+            subtitle_container.innerHTML = "";
           }
         });
 
@@ -262,10 +497,36 @@
 
         var subtitle_settings_container = document.getElementById("subtitle-settings-container");
 
+        subtitle_settings_container.querySelectorAll(".movement-setting").forEach(setting => {
+          setting.querySelectorAll("input").forEach(input => {
+            input.addEventListener('change', function(){
+              if (input.className.includes("movement-disabled")){
+                console.log(input.id+"-downward-state");
+                console.log(input.id+"-upward-state");
+                document.documentElement.style.setProperty((input.id+"-downward-state"), "paused"); 
+                document.documentElement.style.setProperty((input.id+"-upward-state"), "paused"); 
+              }else{
+                if (input.id.includes("-downward-state")){
+                  document.documentElement.style.setProperty((input.name+"-downward-state"), "running"); 
+                  document.documentElement.style.setProperty((input.name+"-upward-state"), "paused"); 
+                }else{
+                  document.documentElement.style.setProperty((input.name+"-downward-state"), "paused"); 
+                  document.documentElement.style.setProperty((input.name+"-upward-state"), "running"); 
+                }
+              }
+            })
+            
+          })
+          
+        })
+
         subtitle_settings_container.querySelectorAll("input").forEach(input => {
 
           // All Checkbox Inputs
           if (input.type === "checkbox"){
+            if (input.parentElement.className == "movement-setting"){
+
+            }else{
             input.addEventListener('change', function() {
               if (this.checked) {
                 document.documentElement.style.setProperty(this.name, "running");
@@ -273,6 +534,7 @@
                 document.documentElement.style.setProperty(this.name, "paused");
               }
             })
+            }
           // All Colour Inputs
           }else if (input.type === "color"){
             input.addEventListener('change', function() {
