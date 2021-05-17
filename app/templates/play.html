@@ -459,9 +459,6 @@
           
           let cues = track.activeCues;  // array of current cues
           let cue = cues[0]; // current cue
-          
-          console.log(cues);
-          console.log(cue);
 
           if (cues.length != 0){
             // Calculate animation time from subtitle duration and convert to miliseconds
@@ -470,6 +467,8 @@
 
             emotion_debug_container.innerHTML = cue.id;
             let x = new DOMParser().parseFromString(cue.text, 'text/html').body.childNodes;
+
+            console.log(x);
 
             const span = (text, index) => {
                 const node = document.createElement('span');
@@ -481,9 +480,11 @@
               
 
             let parent = document.createElement('p');
+            
             parent = subtitle_container.appendChild(parent);
-
-            console.log(x);
+        
+            console.log(subtitle_container);
+            console.log(parent);
 
             x.forEach(x =>{
               child = document.createElement('span');
@@ -534,8 +535,6 @@
           setting.querySelectorAll("input").forEach(input => {
             input.addEventListener('change', function(){
               if (input.className.includes("movement-disabled")){
-                console.log(input.id+"-downward-state");
-                console.log(input.id+"-upward-state");
                 document.documentElement.style.setProperty((input.id+"-downward-state"), "paused"); 
                 document.documentElement.style.setProperty((input.id+"-upward-state"), "paused"); 
               }else{
