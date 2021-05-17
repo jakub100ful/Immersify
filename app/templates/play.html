@@ -187,17 +187,20 @@
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="fear-shake-check" name="--sad-animation-shake-state">
+                    <input class="form-check-input" type="checkbox" value="" id="sad-shake-check" name="--sad-animation-shake-state">
                     <label class="form-check-label" for="flexCheckChecked">
                       Text Shake
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="fear-shake-check" name="--sad-animation-heartbeat-state">
+                    <input class="form-check-input" type="checkbox" value="" id="sad-heartbeat-check" name="--sad-animation-heartbeat-state">
                     <label class="form-check-label" for="flexCheckChecked">
                       Heartbeat
                     </label>
                   </div>
+                  <label for="sad-heartbeat-speed-range" class="form-label">Heartbeat Speed</label>
+                  <input type="range" class="form-range" value="5" min="1" max="10" step="1" id="sad-heartbeat-speed-range" name="--sad-animation-heartbeat-speed">
+                  <label for="sad-colour-pick" class="form-label">Text Colour</label>
                   <input type="color" id="sad-colour-pick" name="--sad-colour" value="blue">
                 </div>
                 {# Happy Subtitle Settings #}
@@ -248,11 +251,14 @@
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="happy-shake-check" name="--happy-animation-heartbeat-state">
+                    <input class="form-check-input" type="checkbox" value="" id="happy-heartbeat-check" name="--happy-animation-heartbeat-state">
                     <label class="form-check-label" for="flexCheckChecked">
                       Heartbeat
                     </label>
                   </div>
+                  <label for="happy-heartbeat-speed-range" class="form-label">Heartbeat Speed</label>
+                  <input type="range" class="form-range" value="5" min="1" max="10" step="1" id="happy-heartbeat-speed-range" name="--happy-animation-heartbeat-speed">
+                  <label for="happy-colour-pick" class="form-label">Text Colour</label>
                   <input type="color" id="happy-colour-pick" name="--happy-colour" value="seagreen">
                 </div>
                 {# Fear Subtitle Settings #}
@@ -303,11 +309,14 @@
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="fear-shake-check" name="--fear-animation-heartbeat-state" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="fear-heartbeat-check" name="--fear-animation-heartbeat-state" checked>
                     <label class="form-check-label" for="flexCheckChecked">
                       Heartbeat
                     </label>
                   </div>
+                  <label for="fear-heartbeat-speed-range" class="form-label">Heartbeat Speed</label>
+                  <input type="range" class="form-range" value="5" min="1" max="10" step="1" id="fear-heartbeat-speed-range" name="--fear-animation-heartbeat-speed">
+                  <label for="fear-colour-pick" class="form-label">Text Colour</label>
                   <input type="color" id="fear-colour-pick" name="--fear-colour" value="orange">
                 </div>
                 {# Anger Subtitle Settings #}
@@ -358,11 +367,14 @@
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="anger-shake-check" name="--anger-animation-heartbeat-state" checked>
+                    <input class="form-check-input" type="checkbox" value="" id="anger-heartbeat-check" name="--anger-animation-heartbeat-state" checked>
                     <label class="form-check-label" for="flexCheckChecked">
                       Heartbeat
                     </label>
                   </div>
+                  <label for="anger-heartbeat-speed-range" class="form-label">Heartbeat Speed</label>
+                  <input type="range" class="form-range" value="5" min="1" max="10" step="1" id="anger-heartbeat-speed-range" name="--anger-animation-heartbeat-speed">
+                  <label for="anger-colour-pick" class="form-label">Text Colour</label>
                   <input type="color" id="anger-colour-pick" name="--anger-colour" value="red">
                 </div>
 
@@ -414,11 +426,14 @@
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="surprise-shake-check" name="--surprise-animation-heartbeat-state">
+                    <input class="form-check-input" type="checkbox" value="" id="surprise-heartbeat-check" name="--surprise-animation-heartbeat-state">
                     <label class="form-check-label" for="flexCheckChecked">
                       Heartbeat
                     </label>
                   </div>
+                  <label for="surprise-heartbeat-speed-range" class="form-label">Heartbeat Speed</label>
+                  <input type="range" class="form-range" value="5" min="1" max="10" step="1" id="surprise-heartbeat-speed-range" name="--surprise-animation-heartbeat-speed">
+                  <label for="surprise-colour-pick" class="form-label">Text Colour</label>
                   <input type="color" id="surprise-colour-pick" name="--surprise-colour" value="yellow">
                 </div>
               </div>
@@ -559,8 +574,7 @@
             // TODO: RANGE INPUTS
           }else if (input.type === "range"){
             input.addEventListener('input', function() {
-              value = this.value;
-              document.documentElement.style.setProperty(this.name, this.value);
+              document.documentElement.style.setProperty(this.name, this.value+"s");
             })
           }
           

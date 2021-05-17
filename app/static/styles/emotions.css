@@ -11,6 +11,7 @@
   --happy-animation-squish-state: paused;
   --happy-animation-shake-state: paused;
   --happy-animation-heartbeat-state: paused;
+  --happy-animation-heartbeat-speed: 5s;
 
   /* SAD PROPERTIES */
   --sad-colour: blue;
@@ -21,6 +22,7 @@
   --sad-animation-squish-state: running;
   --sad-animation-shake-state: paused;
   --sad-animation-heartbeat-state: paused;
+  --sad-animation-heartbeat-speed: 5s;
 
   /* FEAR PROPERTIES */
   --fear-colour: orange;
@@ -31,6 +33,7 @@
   --fear-animation-squish-state: paused;
   --fear-animation-shake-state: running;
   --fear-animation-heartbeat-state: running;
+  --fear-animation-heartbeat-speed: 5s;
 
   /* ANGER PROPERTIES */
   --anger-colour: red;
@@ -41,6 +44,7 @@
   --anger-animation-squish-state: paused;
   --anger-animation-shake-state: running;
   --anger-animation-heartbeat-state: running;
+  --anger-animation-heartbeat-speed: 5s;
 
   /* SURPRISE PROPERTIES */
   --surprise-colour: yellow;
@@ -51,6 +55,7 @@
   --surprise-animation-squish-state: paused;
   --surprise-animation-shake-state: running;
   --surprise-animation-heartbeat-state: paused;
+  --surprise-animation-heartbeat-speed: 5s;
 }
 
 @keyframes upward {
@@ -114,7 +119,19 @@
   0% {
     transform: scale(1);
   }
-  50% {
+  16% {
+    transform: scale(1.1);
+  }
+  32% {
+    transform: scale(1);
+  }
+  48% {
+    transform: scale(1.1);
+  }
+  64% {
+    transform: scale(1);
+  }
+  80% {
     transform: scale(1.1);
   }
   100% {
@@ -128,7 +145,7 @@
   animation: downward var(--animation-duration),
     upward var(--animation-duration), fadeout var(--animation-duration),
     stretch var(--animation-duration), squish var(--animation-duration),
-    heartbeat var(--animation-duration) infinite;
+    heartbeat var(--happy-animation-heartbeat-speed) infinite;
   animation-play-state: var(--happy-animation-downward-state),
     var(--happy-animation-upward-state), var(--happy-animation-fadeout-state),
     var(--happy-animation-stretch-state), var(--happy-animation-squish-state),
@@ -141,7 +158,7 @@
   animation: downward var(--animation-duration),
     upward var(--animation-duration), fadeout var(--animation-duration),
     stretch var(--animation-duration), squish var(--animation-duration),
-    heartbeat var(--animation-duration) infinite;
+    heartbeat var(--sad-animation-heartbeat-speed) infinite;
   animation-play-state: var(--sad-animation-downward-state),
     var(--sad-animation-upward-state), var(--sad-animation-fadeout-state),
     var(--sad-animation-stretch-state), var(--sad-animation-squish-state),
@@ -154,7 +171,7 @@
   animation: downward var(--animation-duration),
     upward var(--animation-duration), fadeout var(--animation-duration),
     stretch var(--animation-duration), squish var(--animation-duration),
-    heartbeat var(--animation-duration) infinite;
+    heartbeat var(--fear-animation-heartbeat-speed) infinite;
   animation-play-state: var(--fear-animation-downward-state),
     var(--fear-animation-upward-state), var(--fear-animation-fadeout-state),
     var(--fear-animation-stretch-state), var(--fear-animation-squish-state),
@@ -167,7 +184,7 @@
   animation: downward var(--animation-duration),
     upward var(--animation-duration), fadeout var(--animation-duration),
     stretch var(--animation-duration), squish var(--animation-duration),
-    heartbeat var(--animation-duration) infinite;
+    heartbeat var(--anger-animation-heartbeat-speed) infinite;
   animation-play-state: var(--anger-animation-downward-state),
     var(--anger-animation-upward-state), var(--anger-animation-fadeout-state),
     var(--anger-animation-stretch-state), var(--anger-animation-squish-state),
@@ -180,7 +197,7 @@
   animation: downward var(--animation-duration),
     upward var(--animation-duration), fadeout var(--animation-duration),
     stretch var(--animation-duration), squish var(--animation-duration),
-    heartbeat var(--animation-duration) infinite;
+    heartbeat var(--surprise-animation-heartbeat-speed) infinite;
   animation-play-state: var(--surprise-animation-downward-state),
     var(--surprise-animation-upward-state),
     var(--surprise-animation-fadeout-state),

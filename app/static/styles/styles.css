@@ -7,9 +7,31 @@
   z-index: 2;
 }
 
+#sad-heartbeat-speed-range {
+  direction: rtl;
+}
+
+#happy-heartbeat-speed-range {
+  direction: rtl;
+}
+
+#fear-heartbeat-speed-range {
+  direction: rtl;
+}
+
+#anger-heartbeat-speed-range {
+  direction: rtl;
+}
+
+#surprise-heartbeat-speed-range {
+  direction: rtl;
+}
+
 #display {
   font-size: 42px;
   color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
   font-weight: 500;
   text-align: center;
   border: black 1px;
