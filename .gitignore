@@ -125,7 +125,7 @@ dmypy.json
 .pyre/
 
 # Video resources
-/app/static/videos/*
+/static/videos/*
 
 # Mac DS Files
 .DS_Store
