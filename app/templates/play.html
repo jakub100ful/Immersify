@@ -480,11 +480,13 @@
               
 
             let parent = document.createElement('p');
+            let span_animation_upward = document.createElement('div');
+            let span_animation_downward = document.createElement('div');
+            let span_animation_stretch = document.createElement('div');
+            let span_animation_squish = document.createElement('div');
+            let span_animation_heartbeat = document.createElement('div');
             
-            parent = subtitle_container.appendChild(parent);
-        
-            console.log(subtitle_container);
-            console.log(parent);
+            parent_div = subtitle_container.appendChild(span_animation_heartbeat);
 
             x.forEach(x =>{
               child = document.createElement('span');
@@ -498,6 +500,18 @@
                 })
 
             parent.appendChild(child);
+            span_animation_upward.appendChild(parent);
+            span_animation_upward.id = x.id+"-animation-upward-span";
+            span_animation_downward.appendChild(span_animation_upward);
+            span_animation_downward.id = x.id+"-animation-downward-span";
+            span_animation_stretch.appendChild(span_animation_downward);
+            span_animation_stretch.id = x.id+"-animation-stretch-span";
+            span_animation_squish.appendChild(span_animation_stretch);
+            span_animation_squish.id = x.id+"-animation-squish-span";
+            span_animation_heartbeat.appendChild(span_animation_squish);
+            span_animation_heartbeat.id = x.id+"-animation-heartbeat-span";
+            
+            console.log(span_animation_heartbeat);
             })
 
             // Cue gets written to the HTML subtitle container

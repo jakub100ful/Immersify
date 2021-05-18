@@ -139,73 +139,212 @@
   }
 }
 
+/* HAPPY ANIMATIONS */
+
 .happy {
   display: inline-block;
   color: var(--happy-colour);
-  animation: downward var(--animation-duration),
-    upward var(--animation-duration), fadeout var(--animation-duration),
-    stretch var(--animation-duration), squish var(--animation-duration),
-    heartbeat var(--happy-animation-heartbeat-speed) infinite;
-  animation-play-state: var(--happy-animation-downward-state),
-    var(--happy-animation-upward-state), var(--happy-animation-fadeout-state),
-    var(--happy-animation-stretch-state), var(--happy-animation-squish-state),
-    var(--happy-animation-heartbeat-state);
+  animation: fadeout var(--animation-duration);
+  animation-play-state: var(--happy-animation-fadeout-state);
   transition: 0.3s;
 }
+
+#happy-animation-upward-span {
+  display: inline-block;
+  animation: upward var(--animation-duration);
+  animation-play-state: var(--happy-animation-upward-state);
+  transition: 0.3;
+}
+#happy-animation-downward-span {
+  display: inline-block;
+  animation: downward var(--animation-duration);
+  animation-play-state: var(--happy-animation-downward-state);
+  transition: 0.3;
+}
+#happy-animation-stretch-span {
+  display: inline-block;
+  animation: stretch var(--animation-duration);
+  animation-play-state: var(--happy-animation-stretch-state);
+  transition: 0.3;
+}
+#happy-animation-squish-span {
+  display: inline-block;
+  animation: squish var(--animation-duration);
+  animation-play-state: var(--happy-animation-squish-state);
+  transition: 0.3;
+}
+#happy-animation-heartbeat-span {
+  display: inline-block;
+  animation: heartbeat var(--happy-animation-heartbeat-speed) infinite;
+  animation-play-state: var(--happy-animation-heartbeat-state);
+  transition: 0.3;
+}
+
+/* SAD ANIMATIONS */
+
 .sad {
   display: inline-block;
   color: var(--sad-colour);
-  animation: downward var(--animation-duration),
-    upward var(--animation-duration), fadeout var(--animation-duration),
-    stretch var(--animation-duration), squish var(--animation-duration),
-    heartbeat var(--sad-animation-heartbeat-speed) infinite;
-  animation-play-state: var(--sad-animation-downward-state),
-    var(--sad-animation-upward-state), var(--sad-animation-fadeout-state),
-    var(--sad-animation-stretch-state), var(--sad-animation-squish-state),
-    var(--sad-animation-heartbeat-state);
+  animation: fadeout var(--animation-duration);
+  animation-play-state: var(--sad-animation-fadeout-state);
   transition: 0.3s;
 }
+
+#sad-animation-upward-span {
+  display: inline-block;
+  animation: upward var(--animation-duration);
+  animation-play-state: var(--sad-animation-upward-state);
+  transition: 0.3;
+}
+#sad-animation-downward-span {
+  display: inline-block;
+  animation: downward var(--animation-duration);
+  animation-play-state: var(--sad-animation-downward-state);
+  transition: 0.3;
+}
+#sad-animation-stretch-span {
+  display: inline-block;
+  animation: stretch var(--animation-duration);
+  animation-play-state: var(--sad-animation-stretch-state);
+  transition: 0.3;
+}
+#sad-animation-squish-span {
+  display: inline-block;
+  animation: squish var(--animation-duration);
+  animation-play-state: var(--sad-animation-squish-state);
+  transition: 0.3;
+}
+#sad-animation-heartbeat-span {
+  display: inline-block;
+  animation: heartbeat var(--sad-animation-heartbeat-speed) infinite;
+  animation-play-state: var(--sad-animation-heartbeat-state);
+  transition: 0.3;
+}
+
+/* FEAR ANIMATIONS */
+
 .fear {
   display: inline-block;
   color: var(--fear-colour);
-  animation: downward var(--animation-duration),
-    upward var(--animation-duration), fadeout var(--animation-duration),
-    stretch var(--animation-duration), squish var(--animation-duration),
-    heartbeat var(--fear-animation-heartbeat-speed) infinite;
-  animation-play-state: var(--fear-animation-downward-state),
-    var(--fear-animation-upward-state), var(--fear-animation-fadeout-state),
-    var(--fear-animation-stretch-state), var(--fear-animation-squish-state),
-    var(--fear-animation-heartbeat-state);
+  animation: fadeout var(--animation-duration);
+  animation-play-state: var(--fear-animation-fadeout-state);
   transition: 0.3s;
 }
+
+#fear-animation-upward-span {
+  display: inline-block;
+  animation: upward var(--animation-duration);
+  animation-play-state: var(--fear-animation-upward-state);
+  transition: 0.3;
+}
+#fear-animation-downward-span {
+  display: inline-block;
+  animation: downward var(--animation-duration);
+  animation-play-state: var(--fear-animation-downward-state);
+  transition: 0.3;
+}
+#fear-animation-stretch-span {
+  display: inline-block;
+  animation: stretch var(--animation-duration);
+  animation-play-state: var(--fear-animation-stretch-state);
+  transition: 0.3;
+}
+#fear-animation-squish-span {
+  display: inline-block;
+  animation: squish var(--animation-duration);
+  animation-play-state: var(--fear-animation-squish-state);
+  transition: 0.3;
+}
+#fear-animation-heartbeat-span {
+  display: inline-block;
+  animation: heartbeat var(--fear-animation-heartbeat-speed) infinite;
+  animation-play-state: var(--fear-animation-heartbeat-state);
+  transition: 0.3;
+}
+
+/* ANGER ANIMATIONS */
+
 .anger {
   display: inline-block;
   color: var(--anger-colour);
-  animation: downward var(--animation-duration),
-    upward var(--animation-duration), fadeout var(--animation-duration),
-    stretch var(--animation-duration), squish var(--animation-duration),
-    heartbeat var(--anger-animation-heartbeat-speed) infinite;
-  animation-play-state: var(--anger-animation-downward-state),
-    var(--anger-animation-upward-state), var(--anger-animation-fadeout-state),
-    var(--anger-animation-stretch-state), var(--anger-animation-squish-state),
-    var(--anger-animation-heartbeat-state);
+  animation: fadeout var(--animation-duration);
+  animation-play-state: var(--anger-animation-fadeout-state);
   transition: 0.3s;
 }
+
+#anger-animation-upward-span {
+  display: inline-block;
+  animation: upward var(--animation-duration);
+  animation-play-state: var(--anger-animation-upward-state);
+  transition: 0.3;
+}
+#anger-animation-downward-span {
+  display: inline-block;
+  animation: downward var(--animation-duration);
+  animation-play-state: var(--anger-animation-downward-state);
+  transition: 0.3;
+}
+#anger-animation-stretch-span {
+  display: inline-block;
+  animation: stretch var(--animation-duration);
+  animation-play-state: var(--anger-animation-stretch-state);
+  transition: 0.3;
+}
+#anger-animation-squish-span {
+  display: inline-block;
+  animation: squish var(--animation-duration);
+  animation-play-state: var(--anger-animation-squish-state);
+  transition: 0.3;
+}
+#anger-animation-heartbeat-span {
+  display: inline-block;
+  animation: heartbeat var(--anger-animation-heartbeat-speed) infinite;
+  animation-play-state: var(--anger-animation-heartbeat-state);
+  transition: 0.3;
+}
+
+/* SURPRISE ANIMATIONS */
+
 .surprise {
   display: inline-block;
   color: var(--surprise-colour);
-  animation: downward var(--animation-duration),
-    upward var(--animation-duration), fadeout var(--animation-duration),
-    stretch var(--animation-duration), squish var(--animation-duration),
-    heartbeat var(--surprise-animation-heartbeat-speed) infinite;
-  animation-play-state: var(--surprise-animation-downward-state),
-    var(--surprise-animation-upward-state),
-    var(--surprise-animation-fadeout-state),
-    var(--surprise-animation-stretch-state),
-    var(--surprise-animation-squish-state),
-    var(--surprise-animation-heartbeat-state);
+  animation: fadeout var(--animation-duration);
+  animation-play-state: var(--surprise-animation-fadeout-state);
   transition: 0.3s;
 }
+
+#surprise-animation-upward-span {
+  display: inline-block;
+  animation: upward var(--animation-duration);
+  animation-play-state: var(--surprise-animation-upward-state);
+  transition: 0.3;
+}
+#surprise-animation-downward-span {
+  display: inline-block;
+  animation: downward var(--animation-duration);
+  animation-play-state: var(--surprise-animation-downward-state);
+  transition: 0.3;
+}
+#surprise-animation-stretch-span {
+  display: inline-block;
+  animation: stretch var(--animation-duration);
+  animation-play-state: var(--surprise-animation-stretch-state);
+  transition: 0.3;
+}
+#surprise-animation-squish-span {
+  display: inline-block;
+  animation: squish var(--animation-duration);
+  animation-play-state: var(--surprise-animation-squish-state);
+  transition: 0.3;
+}
+#surprise-animation-heartbeat-span {
+  display: inline-block;
+  animation: heartbeat var(--surprise-animation-heartbeat-speed) infinite;
+  animation-play-state: var(--surprise-animation-heartbeat-state);
+  transition: 0.3;
+}
+
+/* SHAKE ANIMATIONS */
 
 span.happy span {
   position: relative;
