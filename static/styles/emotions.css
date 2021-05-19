@@ -80,7 +80,7 @@
   0% {
     opacity: 1;
   }
-  90% {
+  80% {
     opacity: 1;
   }
   100% {
@@ -108,10 +108,7 @@
 
 @keyframes shake {
   100% {
-    top: -5px;
-    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
-      0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
-      0 50px 25px rgba(0, 0, 0, 0.2);
+    top: -0.2em;
   }
 }
 
@@ -348,67 +345,52 @@
 
 span.happy span {
   position: relative;
-  top: 5px;
+  top: 0.1em;
   margin-right: 1;
   display: inline-block;
   animation: shake 0.3s ease infinite alternate;
   animation-delay: calc(0.1s * var(--index));
   animation-play-state: var(--happy-animation-shake-state);
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
-    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
-    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
 }
 
 span.sad span {
   position: relative;
-  top: 5px;
+  top: 0.1em;
   margin-right: 1;
   display: inline-block;
   animation: shake 0.3s ease infinite alternate;
   animation-delay: calc(0.1s * var(--index));
   animation-play-state: var(--sad-animation-shake-state);
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
-    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
-    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
 }
 
 span.fear span {
   position: relative;
-  top: 5px;
+  top: 0.1em;
   margin-right: 1;
   display: inline-block;
   animation: shake 0.3s ease infinite alternate;
   animation-delay: calc(0.1s * var(--index));
   animation-play-state: var(--fear-animation-shake-state);
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
-    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
-    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
 }
 
 span.anger span {
   position: relative;
-  top: 5px;
+  top: 0.1em;
   margin-right: 1;
   display: inline-block;
   animation: shake 0.3s ease infinite alternate;
   animation-delay: calc(0.1s * var(--index));
   animation-play-state: var(--anger-animation-shake-state);
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
-    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
-    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
 }
 
 span.surprise span {
   position: relative;
-  top: 5px;
+  top: 0.1em;
   margin-right: 1;
   display: inline-block;
   animation: shake 0.3s ease infinite alternate;
   animation-delay: calc(0.1s * var(--index));
   animation-play-state: var(--surprise-animation-shake-state);
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
-    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
-    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
 }
 
 span {

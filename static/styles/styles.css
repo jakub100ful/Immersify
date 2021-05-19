@@ -28,7 +28,7 @@
 }
 
 #display {
-  font-size: 42px;
+  font-size: 2.25vw;
   color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
@@ -38,10 +38,14 @@
   z-index: 300000;
   grid-column-start: 1;
   grid-column-end: 5;
-  grid-row-start: 11;
-  grid-row-end: 12;
+  grid-row-start: 12;
+  grid-row-end: 13;
   pointer-events: none;
   display: inline-block;
+}
+
+#emotion-confidence-debug {
+  position: absolute;
 }
 
 video {

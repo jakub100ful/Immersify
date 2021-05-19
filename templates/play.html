@@ -78,11 +78,11 @@
           </div>
         </video>
         <!-- Subtitle -->
+        <div class="container"><p class="text-white" id="emotion-confidence-debug" style="visibility: hidden;"></p></div>
         <div id="display">
         </div>
       </div>
     </div>
-    <div class="container"><p class="text-white" id="emotion-confidence-debug" style="visibility: hidden;"></p></div>
     <div class="accordion text-white w-75 m-auto" id="accordion-settings">
       <div class="accordion-item bg-secondary">
         <h1 class="accordion-header" id="headingOne">
@@ -477,8 +477,6 @@
                 return node
               }
 
-              
-
             let parent = document.createElement('p');
             let span_animation_upward = document.createElement('div');
             let span_animation_downward = document.createElement('div');
@@ -486,33 +484,33 @@
             let span_animation_squish = document.createElement('div');
             let span_animation_heartbeat = document.createElement('div');
             
-            parent_div = subtitle_container.appendChild(span_animation_heartbeat);
+            parent = subtitle_container.appendChild(parent);
 
             x.forEach(x =>{
               child = document.createElement('span');
 
               if(x.id){
                 child.classList.add(x.id);
-              }
-
-              [...x.innerText].map(span).forEach(el => {
+                [...x.innerText].map(span).forEach(el => {
                   child.appendChild(el)
                 })
-
-            parent.appendChild(child);
-            span_animation_upward.appendChild(parent);
-            span_animation_upward.id = x.id+"-animation-upward-span";
-            span_animation_downward.appendChild(span_animation_upward);
-            span_animation_downward.id = x.id+"-animation-downward-span";
-            span_animation_stretch.appendChild(span_animation_downward);
-            span_animation_stretch.id = x.id+"-animation-stretch-span";
-            span_animation_squish.appendChild(span_animation_stretch);
-            span_animation_squish.id = x.id+"-animation-squish-span";
-            span_animation_heartbeat.appendChild(span_animation_squish);
-            span_animation_heartbeat.id = x.id+"-animation-heartbeat-span";
-            
-            console.log(span_animation_heartbeat);
+                span_animation_upward.appendChild(child);
+                span_animation_upward.id = x.id+"-animation-upward-span";
+                span_animation_downward.appendChild(span_animation_upward);
+                span_animation_downward.id = x.id+"-animation-downward-span";
+                span_animation_stretch.appendChild(span_animation_downward);
+                span_animation_stretch.id = x.id+"-animation-stretch-span";
+                span_animation_squish.appendChild(span_animation_stretch);
+                span_animation_squish.id = x.id+"-animation-squish-span";
+                span_animation_heartbeat.appendChild(span_animation_squish);
+                span_animation_heartbeat.id = x.id+"-animation-heartbeat-span";
+              }else{
+                child.innerText = x.innerText;
+                parent.appendChild(child);
+              }
+              parent.appendChild(span_animation_heartbeat);
             })
+            console.log(parent);
 
             // Cue gets written to the HTML subtitle container
             // subtitle_container.innerHTML = cues[0].text;
