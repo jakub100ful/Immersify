@@ -17,6 +17,6 @@ def index():
 def play():
     video_id = request.args.get('id')
 
-    classifySubtitle(video_id)
+    #classifySubtitle(video_id)
 
     return render_template('play.html', video_id=video_id)

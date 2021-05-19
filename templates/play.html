@@ -45,14 +45,14 @@
       {% set sub_file_path = video_id+"/"+video_id+"_emotive_subtitles.vtt" %}
         <video id="video" controls preload="metadata">
           <source
-            src="{{ url_for('static', filename='videos/' ~ vid_file_path) | safe }}"
+            src="https://immersify-assets.s3.eu-west-2.amazonaws.com/videos/vid1/videos/vid1/vid1_video.mp4"
             type="video/mp4"
           />
           <track
             label="English"
             kind="subtitles"
             srclang="en"
-            src="{{ url_for('static', filename='videos/' ~ sub_file_path) | safe }}"
+            src="https://immersify-assets.s3.eu-west-2.amazonaws.com/videos/vid1/videos/vid1/vid1_emotive_subtitles.vtt"
             default
           />
 
