@@ -20,7 +20,7 @@ You need to ensure that [Python 3.6](https://www.python.org/downloads/) or later
 `source env/bin/activate`
 
 5. Install the required packages using pip by entering this command: `pip install -r requirements.txt`.
-6. Install the [example videos](https://github.com/jakub100ful/Immersify/releases/tag/1.0) by extracting the `videos` folder into the `static` folder.
+6. Install the [example videos](https://github.com/jakub100ful/Immersify/releases/tag/1.0) by placing the `videos` folder into the `static` folder.
 7. Start the application through this command `flask run`.
 
 **If you are using MacOS and are having issues with SSL certificates**  
