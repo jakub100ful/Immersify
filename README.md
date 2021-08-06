@@ -2,7 +2,7 @@
 
 Immersify is a video player that aims to improve the viewing experience by delivering emotive subtitles that can be customised. It uses machine learning to analyse any scripted video and the subtitle visualisation style can be fully customised.
 
-# Prerequisities
+## Prerequisities
 
 You need to ensure that [Python 3.6](https://www.python.org/downloads/) or later is installed.
 
@@ -20,8 +20,7 @@ You need to ensure that [Python 3.6](https://www.python.org/downloads/) or later
 `source env/bin/activate`
 
 5. Install the required packages using pip by entering this command: `pip install -r requirements.txt`.
-6. Navigate to the app folder within your command prompt `cd app`.
-7. Start the application through this command `flask run`.
+6. Start the application through this command `flask run`.
 
 **If you are using MacOS and are having issues with SSL certificates**  
 Ensure that you have installed the neccessary SSL bundle. You can do this either by running the native _Certificates.command_ file in the Python directory found in your Applications folder, or by installing the _certifi_ package through pip.
@@ -30,9 +29,21 @@ For more information view this article: https://stackoverflow.com/questions/4068
 
 # Usage
 
-To use Immersify, paste `127.0.0.1:5000` in your preferred browser's address bar.
+1. Depending on your operating system, enter one of the following commands to activate the virtual environment.
 
-You will be shown a library of available videos.
+**On Windows:**
+`env\Scripts\activate`
+
+**On Unix or MacOS:**  
+`source env/bin/activate`
+
+2. Start the application using `flask run`.
+
+3. Paste `127.0.0.1:5000` in your preferred browser's address bar.
+
+**NOTE: Immersify has only been tested on Google Chrome 91.0.4472.77**
+
+You will be shown a library of available videos. Click on the image of a desired video to display the video player. During the first playback, emotional subtitles will be generated as `vidID_emotive_subtitles.vtt` and stored in `static/videos/vidID`. You can edit this file to change the classified emotions. Make sure that the **id** of the HTML tag is either `happy`, `sad`,`fear`,`anger` or `surprise`.
 
 ## Adding Videos
 

@@ -6,9 +6,10 @@ import json
 
 
 def decideEmotion(text):
-    # TODO: Filter
+    # Function for deciding the emotion from a string
     emotion_list = te.get_emotion(text)
-    print(emotion_list)
+
+    # Return the highest value from the dictionary as the selected emotion, as well as the original list
     emotion_dict = {
         "selected_emotion": (max(emotion_list.items(),
                                  key=operator.itemgetter(1))[0]),
