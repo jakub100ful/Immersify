@@ -8,9 +8,9 @@ You need to ensure that [Python 3.6](https://www.python.org/downloads/) or later
 
 # Installation
 
-1. Download a copy of the project.
+1. Download a copy of the project and extract it into a preferred folder.
 2. Open a command prompt or terminal in the project root folder (Immersify by default).
-3. Type the following command to create a virtual environment: `python3 -m venv env`.
+3. Type the following command to create a virtual environment: `python3 -m venv env`
 4. Depending on your operating system, enter one of the following commands to activate the virtual environment.
 
 **On Windows:**  
@@ -20,7 +20,8 @@ You need to ensure that [Python 3.6](https://www.python.org/downloads/) or later
 `source env/bin/activate`
 
 5. Install the required packages using pip by entering this command: `pip install -r requirements.txt`.
-6. Start the application through this command `flask run`.
+6. Install the [example videos](https://github.com/jakub100ful/Immersify/releases/tag/1.0) by extracting the `videos` folder into the `static` folder.
+7. Start the application through this command `flask run`.
 
 **If you are using MacOS and are having issues with SSL certificates**  
 Ensure that you have installed the neccessary SSL bundle. You can do this either by running the native _Certificates.command_ file in the Python directory found in your Applications folder, or by installing the _certifi_ package through pip.
@@ -37,7 +38,7 @@ For more information view this article: https://stackoverflow.com/questions/4068
 **On Unix or MacOS:**  
 `source env/bin/activate`
 
-2. Start the application using `flask run`.
+2. Start the application using `flask run`
 
 3. Paste `127.0.0.1:5000` in your preferred browser's address bar.
 
